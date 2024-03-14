@@ -4,8 +4,7 @@ import { Liveblocks } from "@liveblocks/node";
 import { ConvexHttpClient } from "convex/browser";
 
 const liveblocks = new Liveblocks({
-  secret:
-    "sk_dev_BHrY_7MIdRg2qW8V9lSrs6fheL6892eH8NkeaacdSCvVcfgz9_ee4ZnVhWrePCbX",
+  secret: process.env.LIVEBLOCKS_SECRET_KEY!,
 });
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
